@@ -1,0 +1,989 @@
+/*  
+Theme Name: Adeva
+Theme URI: http://adeva.org.br/
+Description: Template para o site Adeva
+Author: Livia Gabos
+Author URI: http://liviagabos.com
+*/
+
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+b,
+form {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol li,
+ul li {
+    font-size: 16px;
+}
+
+
+/*
+          * Remove text-shadow in selection highlight: h5bp.com/i
+          * These selection rule sets have to be separate.
+          * Customize the background color to match your design.
+          */
+
+ ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+ ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+          * A better looking default horizontal rule
+          */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+          * Remove the gap between images, videos, audio and canvas and the bottom of
+          * their containers: h5bp.com/i/440
+          */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+          * Remove default fieldset styles.
+          */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+          * Allow only vertical resizing of textareas.
+          */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+            ESTILOS GERAIS
+            ========================================================================== */
+
+body {
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+}
+
+header {
+    margin: 0 auto;
+    width: 100%;
+    height: 170px;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 96%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-acessibilidade {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    text-align: right;
+    background-color: #efefef;
+    padding-right: 30px;
+}
+
+.menu-acessibilidade a,
+.menu-acessibilidade a:active {
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #a50007;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu-acessibilidade a:focus,
+.menu-acessibilidade a:hover {
+    text-decoration: none;
+}
+
+.menu-acessibilidade a:last-child {
+    margin: 0;
+}
+
+.logo {
+    /* margin-left: 30px; */
+    left: 30px;
+    position: absolute;
+}
+
+.logo img {
+    margin-top: 30px;
+}
+
+.menu-principal {
+    position: absolute;
+    top: 130px;
+    text-align: center;
+    width: 96%;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #a50007;
+    height: 40px;
+}
+
+.menu-principal .icon {
+    background-image: url(img/menu-alt.svg);
+    background-repeat: no-repeat;
+    display: none;
+    /* color: #fff; */
+}
+
+.menu-principal a,
+.menu-principal a:active {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus {
+    color: #a50007;
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+#conteudo {
+    position: relative;
+    width: 96%;
+    max-width: 1000px;
+    margin: 40px auto 80px auto;
+    padding-top: 30px;
+}
+
+#conteudo ul {
+    list-style-type: disc;
+}
+
+#conteudo ul li {
+    margin-top: 0.25em;
+}
+
+#conteudo .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#conteudo .wrapper h1 {
+    font-size: 32px;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+
+#conteudo .wrapper h2 {
+    font-size: 24px;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    font-weight: 900;
+    margin-bottom: 35px;
+    padding-top: 10px;
+}
+
+#conteudo .wrapper h3 {
+    font-size: 18px;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: #a50007;
+}
+
+#conteudo .wrapper p {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 1.58em;
+    margin-bottom: 25px;
+}
+
+#conteudo .wrapper p a,
+#conteudo .wrapper p a:active,
+#conteudo .wrapper p a:visited {
+    color: #a50007;
+    text-decoration: underline;
+}
+
+#conteudo .wrapper p a:hover,
+#conteudo .wrapper p a:focus {
+    text-decoration: none;
+}
+
+#conteudo .wrapper iframe,
+#conteudo .wrapper object,
+#conteudo .wrapper embed {
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#conteudo .wrapper ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+#conteudo .wrapper ol li::before {
+    content: counter(li);
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl
+}
+
+#conteudo .wrapper ol li {
+    counter-increment: li;
+    margin-top: 0.25em;
+}
+
+.portfolios {
+    position: relative;
+    width: 1000px;
+    left: -150px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.portfolio {
+    position: relative;
+    width: 390px;
+    margin: 0 55px;
+    float: left;
+}
+
+.portfolio h2 a {
+    color: #a50007;
+    text-decoration: underline;
+}
+
+.portfolio h2 a:hover {
+    text-decoration: none;
+    color: #222;
+}
+
+.portfolio .link-folio,
+.portfolio .link-folio:active {
+    display: inline-block;
+    background-color: #a50007;
+    color: #fff;
+    padding: 15px 30px;
+    border: 2px solid #a50007;
+    font-size: 14px;
+    line-height: 1em;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+
+.portfolio .link-folio:hover,
+.portfolio .link-folio:focus {
+    background-color: #fff;
+    color: #a50007;
+    text-decoration: underline;
+}
+
+#conteudo .link-portfolio,
+#conteudo .link-portfolio:active {
+    display: inline-block;
+    background-color: #a50007;
+    color: #fff;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border: 2px solid #a50007;
+    font-size: 14px;
+    line-height: 1em;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+
+#conteudo .link-portfolio:hover,
+#conteudo .link-portfolio:focus {
+    background-color: #fff;
+    color: #a50007;
+    text-decoration: underline;
+}
+
+.capa-portfolio {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #222;
+    width: 100%;
+}
+
+footer .container {
+    padding: 30px 30px;
+    width: 96%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* text-align: center; */
+    text-align: center
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.8em;
+    letter-spacing: 0.01em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.note_footer {
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+footer a:hover,
+footer a:focus,
+.note_footer a:hover,
+.note_footer a:focus {
+    text-decoration: none;
+    background-color: #eee;
+    color: #222;
+}
+
+.oculto {
+    position: absolute;
+    left: -999em;
+}
+
+
+/* ==========================================================================
+            ESTILOS ALTO CONTRASTE
+            ========================================================================== */
+
+body.altocontraste {
+    background-color: #000;
+}
+
+body.altocontraste .menu-acessibilidade {
+    background-color: #000;
+}
+
+body.altocontraste .menu-acessibilidade a {
+    color: #FFFF00;
+}
+
+body.altocontraste .menu-principal {
+    background-color: #000;
+}
+
+body.altocontraste .menu-principal a,
+body.altocontraste .menu-principal a:active {
+    color: #fff;
+    text-decoration: underline;
+}
+
+body.altocontraste .menu-principal a:hover,
+body.altocontraste .menu-principal a:focus {
+    color: #000;
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+body.altocontraste #conteudo .wrapper h1 {
+    color: #fff;
+}
+
+body.altocontraste #conteudo .wrapper h2 {
+    color: #fff;
+}
+
+body.altocontraste #conteudo .wrapper h3 {
+    color: #fff;
+}
+
+body.altocontraste #conteudo .wrapper p {
+    color: #fff;
+}
+
+body.altocontraste #conteudo .wrapper p a {
+    color: #FFFF00;
+}
+
+body.altocontraste .portfolio h2 a {
+    color: #FFFF00;
+}
+
+body.altocontraste .portfolio .link-folio,
+body.altocontraste .portfolio .link-folio:active {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.altocontraste .portfolio .link-folio:hover,
+body.altocontraste .portfolio .link-folio:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+body.altocontraste #conteudo .link-portfolio,
+body.altocontraste #conteudo .link-portfolio:active {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.altocontraste #conteudo .link-portfolio:hover,
+body.altocontraste #conteudo .link-portfolio:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+body.altocontraste #conteudo .link-portfolio {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+body.altocontraste #conteudo .link-portfolio:hover,
+.link-portfolio:active {
+    background-color: #fff;
+    color: #000;
+}
+
+body.altocontraste footer {
+    background-color: #000;
+}
+
+body.altocontraste .note_footer {
+    background-color: #000;
+}
+
+
+/* ==========================================================================
+            Helper classes
+            ========================================================================== */
+
+
+/*
+          * Image replacement
+          */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+
+/*
+          * Hide from both screenreaders and browsers: h5bp.com/u
+          */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+/*
+          * Hide only visually, but have it available for screenreaders: h5bp.com/v
+          */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*
+          * Extends the .visuallyhidden class to allow the element to be focusable
+          * when navigated to via the keyboard: h5bp.com/p
+          */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+/*
+          * Hide visually and from screenreaders, but maintain layout
+          */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+          * Clearfix: contain floats
+          *
+          * For modern browsers
+          * 1. The space content is one way to avoid an Opera bug when the
+          *    `contenteditable` attribute is included anywhere else in the document.
+          *    Otherwise it causes space to appear at the top and bottom of elements
+          *    that receive the `clearfix` class.
+          * 2. The use of `table` rather than `block` is only necessary if using
+          *    `:before` to contain the top-margins of child elements.
+          */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/*
+          * For IE 6/7 only
+          * Include this rule to trigger hasLayout and contain floats.
+          */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* Remove padding and margin into box account */
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*Float Classes*/
+
+.clearBoth {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/*Text Classes*/
+
+.upper {
+    text-transform: uppercase;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.image {
+    text-indent: -9999px;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+            EXAMPLE Media Queries for Responsive Design.
+            These examples override the primary ('mobile first') styles.
+            Modify as content requires.
+            ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+            Print styles.
+            Inlined to avoid required HTTP connection: h5bp.com/r
+            ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+              * Don't show links for images, or javascript/internal links
+              */
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+        /* h5bp.com/t */
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    @page {
+        margin: 0.5cm;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .menu-acessibilidade {
+        position: relative;
+        left: 0;
+        width: 100%;
+        text-align: left;
+        background-color: #efefef;
+        padding-left: 30px;
+        display: inline-grid;
+        padding-top: 0;
+        height: 100%;
+    }
+    .logo {
+        left: 25%;
+        position: absolute;
+        top: 110px;
+    }
+    .menu-principal {
+        top: 240px;
+    }
+    #conteudo {
+        top: 80px;
+    }
+    #conteudo .link-portfolio,
+    #conteudo .link-portfolio:active {
+        margin-bottom: 30px;
+    }
+    footer .container {
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    /* .menu-acessibilidade .icon {
+              color: #fff;
+          } */
+    .menu-principal a:not(:first-child) {
+        display: none;
+    }
+    .menu-principal a,
+    .menu-principal a:visited {
+        background-color: #a70002;
+    }
+    .menu-principal .icon,
+    .menu-principal .icon:visited {
+        background-color: #a70002;
+    }
+    .menu-principal a.icon {
+        float: right;
+        display: block;
+    }
+    .menu-principal a:hover {
+        background-color: #a70002;
+        color: #fff;
+    }
+    .menu-principal.responsive {
+        position: absolute;
+        top: 130px;
+    }
+    .menu-principal.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #a70002;
+    }
+    .menu-principal.responsive a {
+        float: none;
+        display: block;
+        /* text-align: left; */
+        background-color: #a70002;
+    }
+    .menu-principal.responsive a.icon:hover {
+        background-color: #a70002;
+    }
+}
+
+
+/* ==========================================================================
+           ESTILOS DA MENSAGEM PARA NAVEGADORES DESATUALIZADOS
+            ========================================================================== */
+
+#msg-atualizacao {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    color: #000;
+    z-index: 9999999999999999999999;
+}
+
+#msg-atualizacao div.wrapper {
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -400px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#msg-atualizacao div.wrapper h1 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-family: inherit;
+    font-size: 48px;
+    line-height: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#msg-atualizacao div.wrapper p {
+    font-family: inherit;
+    font-size: 16px;
+}
+
+#msg-atualizacao div.wrapper hr {
+    width: 70px;
+    margin: 30px auto;
+    border-top: 1px solid #999;
+}
+
+#msg-atualizacao div.wrapper h2 {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1em;
+    font-weight: normal !important;
+}
+
+#msg-atualizacao div.wrapper ul {
+    width: 560px;
+    list-style: none;
+    font-family: inherit;
+    margin: 60px auto 0 auto;
+}
+
+#msg-atualizacao div.wrapper ul li {
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #999;
+}
+
+#msg-atualizacao div.wrapper ul li.no-border {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#msg-atualizacao div.wrapper ul li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding-top: 66px;
+    text-align: center;
+}
+
+#msg-atualizacao div.wrapper ul li a:hover {
+    text-decoration: underline;
+}
+
+#msg-atualizacao div.wrapper ul li a.chrome {
+    background: url('../img/msg-atualizacao/chrome.jpg') no-repeat center top;
+}
+
+#msg-atualizacao div.wrapper ul li a.ff {
+    background: url('../img/msg-atualizacao/firefox.jpg') no-repeat center top;
+}
+
+#msg-atualizacao div.wrapper ul li a.ie {
+    background: url('../img/msg-atualizacao/ie.jpg') no-repeat center top;
+}
+
+#msg-atualizacao div.wrapper ul li a.safari {
+    background: url('../img/msg-atualizacao/safari.jpg') no-repeat center top;
+}

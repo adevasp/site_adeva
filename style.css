@@ -1,0 +1,738 @@
+/*  
+Theme Name: Adeva
+Theme URI: http://adeva.org.br/
+Description: Template para o site Adeva
+Author: Livia Gabos
+Author URI: http://liviagabos.com
+*/
+
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+b,
+form {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol li,
+ul li {
+    font-size: 16px;
+}
+
+
+/*
+          * Remove text-shadow in selection highlight: h5bp.com/i
+          * These selection rule sets have to be separate.
+          * Customize the background color to match your design.
+          */
+
+ ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+ ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+          * A better looking default horizontal rule
+          */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+          * Remove the gap between images, videos, audio and canvas and the bottom of
+          * their containers: h5bp.com/i/440
+          */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+          * Remove default fieldset styles.
+          */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+          * Allow only vertical resizing of textareas.
+          */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+            ESTILOS GERAIS
+========================================================================== */
+
+:root {
+    --menu-back: #000;
+    --menu-font: #FFF;
+    --menu-font-hover: #ffff00;
+    --menu-border: #00efff;
+    --ac-menu-back: #fcfcfc;
+    --ac-menu-font: #000;
+    --ac-menu-hover: #00efff;
+    --main-h1: ;
+    --main-h2: ;
+    --main-h3: ;
+    --main-p: ;
+    --main-a: ;
+    --main-a-hover: ;
+    --main-border: #333;
+    --main-back: #e6f2ff;
+}
+
+body {
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+}
+
+header {
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    position: relative;
+    background-color: var(--ac-menu-back);
+}
+
+.container {
+    position: relative;
+    width: 96%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.margin-rigth-1 {
+    margin-right: 10px;
+}
+
+
+/******** MENU ACESSIBILIDADE*/
+
+.menu-acessibilidade {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    text-align: right;
+    background-color: var(--ac-menu-back);
+    padding-right: 30px;
+}
+
+.menu-acessibilidade ul li {
+    display: inline-block;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: var(--ac-menu-font);
+    margin: 0 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.menu-acessibilidade ul li span {
+    vertical-align: middle;
+    /* line-height: 45px; */
+}
+
+.menu-acessibilidade a,
+.menu-acessibilidade a:active {
+    line-height: 45px;
+    letter-spacing: 0.01em;
+    color: var(--ac-menu-font);
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+.menu-acessibilidade a:focus,
+.menu-acessibilidade a:hover {
+    text-decoration: underline;
+    outline: 2px solid darkslateblue;
+}
+
+.menu-acessibilidade a:last-child {
+    margin: 0;
+}
+
+.dot {
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-color: #999;
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px;
+}
+
+#bg_pb {
+    background: linear-gradient( 90deg, #000, #000 50%, #fff 51%);
+    margin-right: 8px;
+}
+
+#bg_color {
+    background: linear-gradient( 90deg, blue, blue 49%, white 49%, white 51%, yellow 51%);
+}
+
+.separador {
+    height: 20px;
+    border-right: 2px solid #000;
+    line-height: 100%;
+}
+
+.separador-left {
+    height: 20px;
+    border-left: 2px solid #000;
+    line-height: 100%;
+    padding-left: 10px;
+}
+
+.logo {
+    /* margin-left: 30px; */
+    left: 30px;
+    position: absolute;
+}
+
+.logo img {
+    margin-top: 30px;
+}
+
+
+/*******  Menu Principal */
+
+.menu-principal {
+    position: absolute;
+    top: 45px;
+    /* text-align: center; */
+    /* width: 96%; */
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--menu-back);
+    letter-spacing: 0.01em;
+    height: 80px;
+}
+
+#menu-topo {
+    max-width: 1000px;
+    /* text-align: center; */
+    width: 96%;
+    height: 100%;
+    position: relative;
+    /* text-align: center; */
+}
+
+.nav-main {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    left: 50%;
+    width: 100%;
+}
+
+
+/* .nav-main ul {
+    position: absolute;
+    left: -999em;
+    /* text-align: center; 
+} */
+
+.nav-main li {
+    display: inline-block;
+    /* text-align: left; */
+    /* vertical-align: middle; */
+    text-align: center;
+    position: relative;
+    background-color: var(--menu-back);
+}
+
+.nav-main li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid var(--menu-border);
+}
+
+.nav-main li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: none;
+    /* transition: all 0.5s ease; */
+    /* width: 100%; */
+    margin-top: 2px;
+    min-width: 2px;
+    left: 35%;
+    /* transform: translateX(50%); */
+    transition: 0.3s 2s;
+    /* hover */
+}
+
+.nav-main .sub-menu {
+    /* transform: translateX(50%); */
+    /* height: auto; */
+    /* width: 280px; */
+    transition: 0.3s 2s;
+}
+
+.nav-main a {
+    color: var(--menu-font);
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    padding: 8px 15px;
+    width: 100%;
+}
+
+.nav-main a:hover,
+.nav-main a:focus {
+    color: var(--menu-font-hover);
+}
+
+.nav-main .menu-item-has-children:hover,
+.nav-main li:hover>ul,
+.nav-main li:focus-within>ul,
+.nav-main li>ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+    transition-delay: 0s;
+}
+
+.nav-main .sub-menu:hover {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+    transition-delay: 0s;
+}
+
+.nav-main .sub-menu li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid var(--menu-border);
+}
+
+
+/* .nav-main li:hover>ul {
+    left: auto;
+} */
+
+
+/*.nav-main li:hover>ul,
+.nav-main li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}*/
+
+.nav-main .sub-menu {
+    /* background-color: var(--menu-back); */
+}
+
+.nav-main .sub-menu li {
+    clear: both;
+    width: 100%;
+    padding: 0px 20px;
+    text-align: left;
+}
+
+.nav-main .sub-menu li:last-child {
+    padding-bottom: 20px;
+}
+
+.nav-main .sub-menu li a {
+    border-left: 2px solid var(--menu-border);
+}
+
+.nav-main .sub-menu li:last-child a {
+    border-bottom: 2px solid var(--menu-border);
+}
+
+.nav-main .current-menu-item {
+    border-bottom: 2px solid var(--menu-border);
+    border-top: 2px solid var(--menu-border);
+}
+
+.menu-item-has-children {}
+
+.current-menu-ancestor {}
+
+
+/****************** Conteúdo  */
+
+#conteudo {
+    position: relative;
+    width: 96%;
+    max-width: 1000px;
+    margin: 100px auto 80px auto;
+    padding-top: 0px;
+}
+
+#conteudo .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+#conteudo .wrapper h1 {
+    font-size: 32px;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    font-weight: 900;
+    margin-bottom: 35px;
+    /* margin-top: 20px; */
+    padding-top: 30px;
+}
+
+#conteudo .space-top {
+    margin-top: 20px;
+}
+
+#conteudo .wrapper h2 {
+    font-size: 24px;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    font-weight: 900;
+    margin-bottom: 35px;
+    padding-top: 10px;
+}
+
+#conteudo .wrapper h3 {
+    font-size: 18px;
+    line-height: 1.1em;
+    letter-spacing: 0.01em;
+    font-weight: 900;
+    margin-bottom: 15px;
+    /* color: #a50007; */
+}
+
+#conteudo .wrapper p {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 1.58em;
+    margin-bottom: 25px;
+}
+
+#conteudo .wrapper p a,
+#conteudo .wrapper p a:active,
+#conteudo .wrapper p a:visited {
+    /* color: #a50007; */
+    text-decoration: underline;
+}
+
+#conteudo .wrapper p a:hover,
+#conteudo .wrapper p a:focus {
+    text-decoration: none;
+}
+
+
+/*******************************************/
+
+
+/*      História
+/********************************************/
+
+#conteudo .linha-tempo {
+    margin: 10px 0;
+}
+
+#conteudo .linha-tempo a {
+    display: inline-block;
+    padding: 5px 5px;
+}
+
+#conteudo .linha-tempo a:first-child {
+    padding-left: 0;
+}
+
+#conteudo .linha-tempo a:last-child {
+    padding-right: 0;
+}
+
+#conteudo .conteudo-historia {
+    margin-bottom: 20px;
+}
+
+#conteudo .conteudo-historia ul li {
+    list-style-type: circle;
+}
+
+
+/* #conteudo .historia {
+    position: relative;
+    width: 100%;
+}
+
+#conteudo .hist-2-col {
+    position: relative;
+    width: 100%;
+}
+
+#conteudo .historia section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#conteudo .historia .linha-item {
+    width: 100%;
+}
+
+#conteudo .left-col {
+    float: left;
+}
+
+#conteudo .wd-30 {
+    width: 30%;
+}
+
+#conteudo .wd-70 {
+    width: 30%;
+}
+
+#conteudo .hist-rigth-col {
+    float: right;
+} */
+
+
+/*******************************************/
+
+
+/*      Area de Destaque
+/********************************************/
+
+#conteudo .area-destaque {
+    width: 90%;
+    overflow: hidden;
+    margin: 40px 10px;
+}
+
+#conteudo .box-destaque {
+    border: 0 var(--main-border);
+    /* border-radius: 35px; */
+    border-radius: 100%;
+    background-color: var(--main-back);
+    width: 47%;
+    margin: 0 15px 0 10px;
+    /* padding: 0 20px; */
+    padding: 10px 45px 0;
+    min-height: 275px;
+    text-align: center;
+}
+
+#conteudo .box-destaque h2 {
+    text-align: center;
+}
+
+#conteudo .box-texto {
+    background-color: var(--main-back);
+    border: 4px dotted var(--main-border);
+    padding: 20px 30px 20px 35px;
+    margin: 20px auto;
+    width: 95%;
+    line-height: 1.5em;
+}
+
+#conteudo .box-texto li {
+    list-style: disc;
+    padding: 8px 2px;
+}
+
+
+/*************************************/
+
+
+/*************************************/
+
+footer {
+    background-color: #222;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+footer .container {
+    padding: 20px 30px;
+    width: 96%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* text-align: center; */
+    text-align: center
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.8em;
+    letter-spacing: 0.01em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.note_footer {
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+footer a:hover,
+footer a:focus,
+.note_footer a:hover,
+.note_footer a:focus {
+    text-decoration: none;
+    background-color: #eee;
+    color: #222;
+}
+
+.oculto {
+    position: absolute;
+    left: -999em;
+}
+
+@media screen and (max-width: 680px) {
+    .menu-acessibilidade ul li {
+        letter-spacing: 0em;
+        font-size: 14px;
+    }
+    #bg_pb {
+        margin-left: 5px;
+    }
+    .texto {
+        display: inline-block;
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .menu-acessibilidade {}
+}
+
+
+/* RESPONSIVE Carrosel CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}
